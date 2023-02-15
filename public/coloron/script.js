@@ -1,7 +1,6 @@
-const { GameClient, User } = require("@oc_datnt/test");
+
 class Game {
     constructor() {
-        this.GameClient = GameClient;
         this.User = User;
         this.score = 0;
         this.isRunning = 0; // game is not running
@@ -198,32 +197,6 @@ class Game {
         $(".start-game, .stop-game").css("display", "none"); // hide all the popups
         $(".nominee").hide();
         new Game();
-        // console.log("this is start initGameClient");
-        // const initGameClient = async () => {
-        //     const client = new GameClient(
-        //         "63c52d07287936de360c02be",
-        //         "23C62AF6295709BB3CC2148CE0C50CBBA2BA2B1729B251E9BE2B42ED612B4B52"
-        //     );
-        //     await client.init();
-        //     return client;
-        // };
-        // console.log("this is start initUser");
-        // const initUser = async () => {
-        //     const user = new User();
-        //     await user.authenticate();
-        //     return user;
-        // };
-        // console.log("this is start initGameClient.then");
-        // initGameClient.then(async (values) => {
-        //     const gameClient = values;
-        //     initUser().then(async (values) => {
-        //         const user = values;
-        //         const currentUser = user.getCurrentUser();
-        //         console.log("user", user);
-        //         console.log("gameClient", gameClient);
-        //         console.log("currentUser", currentUser);
-        //     });
-        // });
         this.score = 0; // reset
 
         this.isRunning = 1;
